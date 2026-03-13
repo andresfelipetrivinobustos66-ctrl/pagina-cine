@@ -1,0 +1,236 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>CineMax — Cartelera</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./Css/cartelera.css"/>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a class="nav-logo" href="index.html">CINE<span>MAX</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cartelera.html" class="active">Cartelera</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero" data-bg="CARTELERA">
+  <div class="page-hero-tag">&#127916;&nbsp; Películas en pantalla</div>
+  <h1><em>elige tu próxima</em>Cartelera</h1>
+  <p>Selecciona tu película, elige el horario y reserva tu entrada en segundos.</p>
+</div>
+
+
+
+<div class="filters">
+  <span class="filter-label">Filtrar:</span>
+  <button class="filter-btn active" onclick="filter('all',this)">Todos</button>
+  <button class="filter-btn" onclick="filter('Acción',this)">Acción</button>
+  <button class="filter-btn" onclick="filter('Drama',this)">Drama</button>
+  <button class="filter-btn" onclick="filter('Thriller',this)">Thriller</button>
+  <button class="filter-btn" onclick="filter('Ciencia Ficción',this)">Ciencia Ficción</button>
+  <button class="filter-btn" onclick="filter('Animación',this)">Animación</button>
+</div>
+
+<div class="cartelera-section">
+  <div class="cartelera-grid" id="grid">
+
+    <div class="cartelera-card" data-genre="Ciencia Ficción">
+      <div class="cartelera-card-img-wrap">
+        <img class="cartelera-card-img" src="https://images.unsplash.com/photo-1724115938504-c2f4fe700da5?q=80&w=731&auto=format&fit=crop" alt="Nebula"/>
+      </div>
+      <div class="cartelera-body">
+        <div class="cartelera-tags"><span class="tag tag-genre">Ciencia Ficción</span><span class="tag tag-new">Estreno</span></div>
+        <div class="cartelera-title">Nebula: El Origen</div>
+        <div class="cartelera-desc">Una épica aventura interestelar donde los límites del universo son apenas el comienzo de lo desconocido.</div>
+        <div class="cartelera-footer">
+          <div><span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">8.7 / 10</span></div>
+          <span class="duration">2h 18min</span>
+        </div>
+        <div class="horarios">
+          <div class="horarios-label">Horarios de hoy</div>
+          <div class="horarios-list">
+            <button class="horario-slot">14:00</button>
+            <button class="horario-slot">16:30</button>
+            <button class="horario-slot">19:00</button>
+            <button class="horario-slot sold-out">21:30</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cartelera-card" data-genre="Thriller">
+      <div class="cartelera-card-img-wrap">
+        <img class="cartelera-card-img" src="https://images.unsplash.com/photo-1716593518123-ec9e09754232?q=80&w=687&auto=format&fit=crop" alt="Crimson Hour"/>
+      </div>
+      <div class="cartelera-body">
+        <div class="cartelera-tags"><span class="tag tag-genre">Thriller</span></div>
+        <div class="cartelera-title">Crimson Hour</div>
+        <div class="cartelera-desc">Un detective obsesionado persigue a un criminal siempre un paso adelante, en las calles de una ciudad sin ley.</div>
+        <div class="cartelera-footer">
+          <div><span class="rating-stars">&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">7.9 / 10</span></div>
+          <span class="duration">1h 58min</span>
+        </div>
+        <div class="horarios">
+          <div class="horarios-label">Horarios de hoy</div>
+          <div class="horarios-list">
+            <button class="horario-slot">13:30</button>
+            <button class="horario-slot">15:45</button>
+            <button class="horario-slot sold-out">18:15</button>
+            <button class="horario-slot">20:30</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cartelera-card" data-genre="Drama">
+      <div class="cartelera-card-img-wrap">
+        <img class="cartelera-card-img" src="https://images.unsplash.com/photo-1693673488806-7f3fc85b5bed?q=80&w=686&auto=format&fit=crop" alt="Eden"/>
+      </div>
+      <div class="cartelera-body">
+        <div class="cartelera-tags"><span class="tag tag-genre">Drama</span><span class="tag tag-new">Estreno</span></div>
+        <div class="cartelera-title">Eden's Last Call</div>
+        <div class="cartelera-desc">Una familia que enfrenta sus secretos más oscuros al regresar al lugar donde todo comenzó.</div>
+        <div class="cartelera-footer">
+          <div><span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">8.2 / 10</span></div>
+          <span class="duration">2h 05min</span>
+        </div>
+        <div class="horarios">
+          <div class="horarios-label">Horarios de hoy</div>
+          <div class="horarios-list">
+            <button class="horario-slot">14:30</button>
+            <button class="horario-slot">17:00</button>
+            <button class="horario-slot">19:45</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cartelera-card" data-genre="Acción">
+      <div class="cartelera-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1638625303600-9f3e7cc103b4?q=80&w=1632&auto=format&fit=crop" alt="Aurum Rising" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+      </div>
+      <div class="cartelera-body">
+        <div class="cartelera-tags"><span class="tag tag-genre">Acción</span></div>
+        <div class="cartelera-title">Aurum Rising</div>
+        <div class="cartelera-desc">Un guerrero solitario deberá forjar alianzas imposibles para salvar un reino que nunca quiso defender.</div>
+        <div class="cartelera-footer">
+          <div><span class="rating-stars">&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">7.5 / 10</span></div>
+          <span class="duration">2h 32min</span>
+        </div>
+        <div class="horarios">
+          <div class="horarios-label">Horarios de hoy</div>
+          <div class="horarios-list">
+            <button class="horario-slot">12:00</button>
+            <button class="horario-slot">15:00</button>
+            <button class="horario-slot">18:00</button>
+            <button class="horario-slot">21:00</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cartelera-card" data-genre="Animación">
+      <div class="cartelera-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1518872421414-376cd3110c4c?q=80&w=687&auto=format&fit=crop" alt="Luminos"/>
+      </div>
+      <div class="cartelera-body">
+        <div class="cartelera-tags"><span class="tag tag-genre">Animación</span><span class="tag tag-new">Estreno</span></div>
+        <div class="cartelera-title">Luminos</div>
+        <div class="cartelera-desc">Un mundo donde los colores tienen vida y una niña debe restaurar la armonía entre la luz y la oscuridad.</div>
+        <div class="cartelera-footer">
+          <div><span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">9.1 / 10</span></div>
+          <span class="duration">1h 42min</span>
+        </div>
+        <div class="horarios">
+          <div class="horarios-label">Horarios de hoy</div>
+          <div class="horarios-list">
+            <button class="horario-slot">11:00</button>
+            <button class="horario-slot">13:30</button>
+            <button class="horario-slot">16:00</button>
+            <button class="horario-slot sold-out">18:30</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cartelera-card" data-genre="Drama">
+      <div class="cartelera-card-img-wrap">
+        <img src="https://images.unsplash.com/photo-1638399777047-1467818f3f9f?q=80&w=687&auto=format&fit=crop" alt="The Stage Is Yours"/>
+      </div>
+      <div class="cartelera-body">
+        <div class="cartelera-tags"><span class="tag tag-genre">Drama</span></div>
+        <div class="cartelera-title">The Stage Is Yours</div>
+        <div class="cartelera-desc">Un joven prodigio enfrenta el costo de la fama y el sacrificio en los escenarios más grandes del mundo.</div>
+        <div class="cartelera-footer">
+          <div><span class="rating-stars">&#9733;&#9733;&#9733;&#9733;</span><span class="rating-num">8.0 / 10</span></div>
+          <span class="duration">2h 14min</span>
+        </div>
+        <div class="horarios">
+          <div class="horarios-label">Horarios de hoy</div>
+          <div class="horarios-list">
+            <button class="horario-slot">15:30</button>
+            <button class="horario-slot">18:00</button>
+            <button class="horario-slot">20:45</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">CINE<span>MAX</span></div>
+    <p class="footer-tagline">Tu destino de entretenimiento. Estrenos exclusivos, la mejor tecnología y una experiencia cinematográfica incomparable.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Navegación</h4>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cartelera.html">Cartelera</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Contacto</h4>
+    <ul>
+      <li><a href="#">&#128205; Calle 72 #10-34, Bogotá</a></li>
+      <li><a href="tel:+5712345678">&#128222; +57 (1) 234-5678</a></li>
+      <li><a href="mailto:info@cinemax.co">&#9993; info@cinemax.co</a></li>
+      <li><a href="#">&#9200; Todos los días 11am – 11pm</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">&copy; 2026 CineMax. Todos los derechos reservados.</div>
+
+<script>
+const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let rx=0,ry=0,cx=0,cy=0;
+document.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY;cur.style.left=cx+'px';cur.style.top=cy+'px';});
+(function loop(){rx+=(cx-rx)*.12;ry+=(cy-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.transform='translate(-50%,-50%) scale(2)';ring.style.opacity='.2';});
+  el.addEventListener('mouseleave',()=>{cur.style.transform='translate(-50%,-50%) scale(1)';ring.style.opacity='.5';});
+});
+function filter(genre,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.cartelera-card').forEach((c,i)=>{
+    const show=genre==='all'||c.dataset.genre===genre;
+    if(show){c.classList.remove('hidden');c.style.animation='none';void c.offsetWidth;c.style.animationDelay=(i*.07)+'s';c.style.animation='cardIn .45s ease both';}
+    else c.classList.add('hidden');
+  });
+}
+</script>
+</body>
+</html>
