@@ -8,9 +8,7 @@
   <link rel="stylesheet" href="./Css/index.css"/>
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
+ 
 <nav>
   <a class="nav-logo" href="index.html">CINE<span>MAX</span></a>
   <ul class="nav-links">
@@ -20,7 +18,7 @@
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
 </nav>
-
+ 
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="film-grain"></div>
@@ -40,19 +38,17 @@
     </div>
   </div>
 </section>
-
-
-
+ 
 <section class="section">
   <div class="section-header">
     <div class="section-title"><span>en cartelera ahora</span>Estrenos</div>
     <a href="cartelera.html" class="btn-secondary" style="padding:10px 22px;font-size:.65rem;">Ver todos &rarr;</a>
   </div>
   <div class="movies-grid">
-
+ 
     <div class="movie-card">
       <div class="movie-card-inner">
-        <img src="https://images.unsplash.com/photo-1724115938504-c2f4fe700da5?q=80&w=731&auto=format&fit=crop" alt="Nebula: El Origen"/>
+        <img src="https://imagiges.unsplash.com/photo-1724115938504-c2f4fe700da5?q=80&w=731&auto=format&fit=crop" alt="Nebula: El Origen"/>
         <div class="movie-badge">NUEVO</div>
         <div class="movie-overlay">
           <div class="movie-genre-tag">Ciencia Ficción</div>
@@ -66,7 +62,7 @@
         <div class="movie-meta"><span class="movie-rating">&#9733; 8.7</span><span>Ciencia Ficción</span><span>2h 18min</span></div>
       </div>
     </div>
-
+ 
     <div class="movie-card">
       <div class="movie-card-inner">
         <img src="https://images.unsplash.com/photo-1716593518123-ec9e09754232?q=80&w=687&auto=format&fit=crop" alt="Crimson Hour"/>
@@ -82,7 +78,7 @@
         <div class="movie-meta"><span class="movie-rating">&#9733; 7.9</span><span>Thriller</span><span>1h 58min</span></div>
       </div>
     </div>
-
+ 
     <div class="movie-card">
       <div class="movie-card-inner">
         <img src="https://images.unsplash.com/photo-1693673488806-7f3fc85b5bed?q=80&w=686&auto=format&fit=crop" alt="Eden's Last Call"/>
@@ -99,10 +95,10 @@
         <div class="movie-meta"><span class="movie-rating">&#9733; 8.2</span><span>Drama</span><span>2h 05min</span></div>
       </div>
     </div>
-
+ 
     <div class="movie-card">
-      <div class="movie-card-inner poster-4">
-        <div class="poster-placeholder"><div style="font-size:3rem">&#9876;</div><div>AURUM</div></div>
+      <div class="movie-card-inner">
+        <img src="https://images.unsplash.com/photo-1638625303600-9f3e7cc103b4?q=80&w=1632&auto=format&fit=crop" alt="Aurum Rising"/>
         <div class="movie-overlay">
           <div class="movie-genre-tag">Acción</div>
           <div class="movie-overlay-title">Aurum Rising</div>
@@ -115,10 +111,10 @@
         <div class="movie-meta"><span class="movie-rating">&#9733; 7.5</span><span>Acción</span><span>2h 32min</span></div>
       </div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <div class="banner-cta">
   <div class="banner-cta-text">
     <h2>Vive el Cine<br>En Grande</h2>
@@ -126,7 +122,7 @@
   </div>
   <a class="btn-primary" href="cartelera.html">Explorar Cartelera</a>
 </div>
-
+ 
 <footer>
   <div>
     <div class="footer-logo">CINE<span>MAX</span></div>
@@ -152,16 +148,6 @@
   </div>
 </footer>
 <div class="footer-bottom">&copy; 2026 CineMax. Todos los derechos reservados.</div>
-
-<script>
-const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let rx=0,ry=0,cx=0,cy=0;
-document.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY;cur.style.left=cx+'px';cur.style.top=cy+'px';});
-(function loop(){rx+=(cx-rx)*.12;ry+=(cy-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
-document.querySelectorAll('a,button').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.transform='translate(-50%,-50%) scale(2)';ring.style.opacity='.2';});
-  el.addEventListener('mouseleave',()=>{cur.style.transform='translate(-50%,-50%) scale(1)';ring.style.opacity='.5';});
-});
-</script>
+ 
 </body>
 </html>
